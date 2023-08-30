@@ -4,7 +4,7 @@ require 'conexao.php';
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 
-$sql = "SELECT * FROM mensagens WHERE id>$id";
+$sql = "SELECT * FROM comentario WHERE id>$id";
 $mensagens = $conexao->query($sql);
 
 foreach($mensagens as $m){
