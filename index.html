@@ -13,15 +13,19 @@
     <h1>ChaThi</h1>
 
     <div class="container">
-        
-            <label for="n">Nome</label>
-            <input type="text" name="nome" id="n" placeholder="Digite seu nome" required>
-        <div>
-            <label for="c">Cor da mensagem</label>
-            <input type="color" name="cor" id="c"placeholder="" required>
-        </div>
-        <div>
-            <input type="submit" value="Conversar">
+        <form action="chat.php" method="get">
+            <div>
+                <label for="n">Nome</label>
+                <input type="text" name="nome" id="n" placeholder="Digite seu nome" required>
+            </div>
+            <div>
+                <label for="c">Cor da mensagem</label>
+                <input type="color" name="cor" id="c"placeholder="" required>
+            </div>
+            <div>
+                <input type="submit" value="Conversar">
+            <div>
+        </form>
 
     </div>
 
