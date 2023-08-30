@@ -8,9 +8,11 @@ $sql = "SELECT * FROM mensagens WHERE id>$id";
 $mensagens = $conexao->query($sql);
 
 foreach($mensagens as $m){
-    echo "<h5>$m[]</h5>"
+    echo $m['nome'];
+    echo $m['datahora'];
+    echo $m['texto'];
 }
 
-
+header('Location: chat.html');
 ?>
 
