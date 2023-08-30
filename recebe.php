@@ -7,9 +7,6 @@ $datahora = filter_input(INPUT_POST, 'datahora', FILTER_SANITIZE_SPECIAL_CHARS);
 $cor = filter_input(INPUT_POST, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
 $conexao->query("INSERT INTO comentario (texto, datahora, nome, cor) VALUES ('$texto', '$datahora', '$nome', '$cor')");
 
-
-
-
 #redireciona
 header('Location: chat.html');
 

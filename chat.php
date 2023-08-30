@@ -1,37 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style_chat.css">
+    <title>ChaThi</title>
 </head>
 <body>
-    <h1>ChaThi</h1>
+    <header>
+        <p>Conversa Global</p>
+    </header>
 
-    <div class="container">
-        <form action="chat.php" method="get">
-            <div>
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
-            </div>
-            <div>
-                <label for="cor">Cor da mensagem</label>
-                <input type="color" name="cor" id="cor" placeholder="" required>
-            </div>
-            <div>
-                <input type="submit" value="Conversar">
-            <div>
-        </form>
-
-    </div>
-
-    
-
-    <!-- Boostrap -->
+     <!-- Boostrap -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
