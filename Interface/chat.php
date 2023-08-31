@@ -9,6 +9,7 @@
 <body>
     <?php
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+        $cor = filter_input(INPUT_POST, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
     ?>
     <header>
         <p><?=$nome?></p>
