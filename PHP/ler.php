@@ -13,6 +13,6 @@ foreach($mensagens as $m){
     echo $m['texto'];
 }
 
-header('Location: chat.html');
+header('Location: ../interface/chat.php');
 ?>
 
