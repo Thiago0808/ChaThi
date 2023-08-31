@@ -7,8 +7,11 @@
     <title>ChaThi</title>
 </head>
 <body>
+    <?php
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+    ?>
     <header>
-        <p>Conversa Global</p>
+        <p><?=$nome?></p>
     </header>
 
      <!-- Boostrap -->
