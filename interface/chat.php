@@ -25,7 +25,7 @@
         </main>
         <div class="enviar-mensagem">
             <div class="input-group">
-                <textarea placeholder="Digite aqui..." class="form-control" aria-label="With textarea"></textarea>
+                <textarea placeholder="Digite aqui..." class="form-control col-8" aria-label="With textarea"></textarea>
             </div>
             <button type="button" class="btn btn-primary">Enviar</button>
         </div>
