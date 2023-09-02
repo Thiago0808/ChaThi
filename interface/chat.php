@@ -23,14 +23,19 @@
         </header>
         <main>
         </main>
-        <div class="enviar-mensagem">
-            <div class="input-group">
-                <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea"></textarea>
+        <form action="../PHP/recebe.php" method="post">
+            <input type="hidden" name="nome" value=<?=$nome?>>
+            <input type="hidden" name="cor" value=<?=$cor?>>
+            <div class="enviar-mensagem">
+                <div class="input-group">
+                    <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto"></textarea>
+                </div>
+                <div class="botao">
+                    <input type="submit" value="Enviar"  class="btn btn-primary">
+                    <!-- <button type="button">Enviar</button> -->
+                </div>
             </div>
-            <div class="botao">
-                <button type="button" class="btn btn-primary">Enviar</button>
-            </div>
-        </div>
+        </form>
     </div>
 
      <!-- Boostrap -->
