@@ -12,9 +12,19 @@
         $cor = filter_input(INPUT_POST, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
     ?>
     
-    <header>
-        <h1><?=$nome?></h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1><?=$nome?></h1>
+        </header>
+        <main>
+        </main>
+        <div>
+            <div class="input-group">
+                <textarea placeholder="Digite aqui..." class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
 
      <!-- Boostrap -->
     <!-- Optional JavaScript; choose one of the two! -->
