@@ -39,6 +39,24 @@ main{
     padding: 0.8%;
 }
 
+.enviar-mensagem{
+    display: flex;
+}
+
+.input-group{
+    flex-basis: 85%;
+}
+
+.botao{
+    flex-basis: 15%;
+    padding-left: 2%;
+}
+
+.btn{
+    font-size: 1.3rem;
+    padding: 4%;
+}
+
 
 
 
