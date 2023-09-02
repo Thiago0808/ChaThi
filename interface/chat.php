@@ -18,7 +18,7 @@
         </header>
         <main>
         </main>
-        <div>
+        <div class="enviar-mensagem">
             <div class="input-group">
                 <textarea placeholder="Digite aqui..." class="form-control" aria-label="With textarea"></textarea>
             </div>
