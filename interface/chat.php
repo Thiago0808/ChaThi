@@ -32,7 +32,6 @@
                 </div>
                 <div class="botao">
                     <input type="submit" value="Enviar"  class="btn btn-primary">
-                    <!-- <button type="button">Enviar</button> -->
                 </div>
             </div>
         </form>
