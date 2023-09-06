@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(231, 229, 229);
+    background-color: rgb(255, 255, 255);
 
 }
 
@@ -15,7 +15,7 @@ body{
     max-width: 1100px;
     padding: 50px;
     background-color: rgb(255, 255, 255);
-    border:3px solid rgb(214, 213, 213);
+    border:3px solid rgb(255, 255, 255);
     border-radius: 5px;
 }
 
@@ -25,16 +25,23 @@ label{
     padding-right: 10px;
 }
 
-input{
-   
-    margin: 9px;
-    padding: 6px;
+.colcor{
+    margin: 10px;
+    padding: 5px;
+    margin-left: 5px;
+    padding-right: 5px;
 }
 
+.colnom{
+    margin: 10px;
+    padding: 5px;
+    margin-left: 100px;
+    padding-right: 10px;
+}
 
 .button{
     margin-left: 100px;
-    padding-right: 10px;
+    padding-right: 7px;
 }
 
 
