@@ -27,10 +27,20 @@ h1{
 main{
     overflow-y: scroll;
     height: 700px;
+    padding-left: 6.25%;
+}
+
+h2{
+    font-size: 1.2rem;
+    font-weight: 600; 
 }
 
 p{
-    padding-left: 6.25%;
+    font-size: 1.2rem;
+}
+
+h3{
+    font-size: 0.9rem;
 }
 
 .input-group{
