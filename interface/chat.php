@@ -1,11 +1,11 @@
 <?php
     $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-    if (!trim(!$nome)){
+    if (!trim($nome)){
         header("Location: index.html");
     }
     $cor = filter_input(INPUT_GET, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
     urldecode($cor);
-    if (!$cor){
+    if (!trim($cor)){
         header("Location: index.html");
     }
 ?>
@@ -31,21 +31,7 @@
         </header>
 
         <main>
-            <?php
-                require_once 'PHP/conexao.php';
 
-                $sql = 'SELECT * FROM comentario ORDER BY ID DESC LIMIT ';
-                $comentarios = $conexao->query($sql);
-
-                foreach($comentarios as $c){
-                    echo '<div class="coment">';
-                        echo $c["nome"];
-                        echo $c["texto"];
-                    echo '</div>';
-                }
-
-
-            ?>
         </main>
 
         <script>
