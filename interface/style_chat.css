@@ -48,9 +48,10 @@ h3{
 
 .coment{
     padding: 1%;
-    margin-top: 1%;
+    margin-top: 0.9%;
     border-radius: 20px; 
     max-width: 50%;
+    margin-bottom: 1%;
 }
 
 .input-group{
