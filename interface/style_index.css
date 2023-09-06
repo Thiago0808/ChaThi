@@ -10,19 +10,20 @@ body{
 }
 
 
-
 .container{
-    max-width: 1100px;
-    padding: 50px;
+    
+    max-width: 1000px;
+    padding: 100px;
     background-color: rgb(255, 255, 255);
     border:3px solid rgb(255, 255, 255);
     border-radius: 5px;
 }
 
 label{
-    line-height: 60px;
+    line-height: 1px;
     margin-left: 100px;
     padding-right: 10px;
+    margin-bottom: .1em;
 }
 
 .colcor{
