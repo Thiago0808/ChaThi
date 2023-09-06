@@ -1,3 +1,9 @@
+body{
+    background-color: rgb(231, 229, 229);
+
+}
+
+
 *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -12,8 +18,8 @@ h1{
 .container{
     max-width: 800px;
     padding: 30px;
-    background-color: rgb(233, 229, 229);
-    border:3px solid rgb(133, 133, 134);
+    background-color: rgb(255, 255, 255);
+    border:3px solid rgb(214, 213, 213);
     border-radius: 5px;
 }
 
@@ -30,7 +36,7 @@ input{
 }
 
 
-button{
+.button{
     margin-left: 100px;
     padding-right: 10px;
 }
