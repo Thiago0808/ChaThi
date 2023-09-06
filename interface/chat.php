@@ -39,7 +39,8 @@
                 $comentarios = $comentarios->fetchAll();
                 $comentarios = array_reverse($comentarios);
                 foreach($comentarios as $c){
-                    echo '<div class="coment">';
+
+                    echo '<div class="coment" style="background:'.$c["cor"].'">';
                     echo '<h2>';
                     echo $c['nome'];
                     echo '</h2>';
