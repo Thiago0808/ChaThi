@@ -10,11 +10,6 @@ body{
 }
 
 
-h1, p{
-    text-align: center;
-    color: rgb(110, 161, 228);
-}
-
 
 .container{
     max-width: 800px;
@@ -43,7 +38,5 @@ input{
 }
 
 img{
-    width: 190px;
-    height: 190px;
-    margin-left: 100px;
+    
 }
