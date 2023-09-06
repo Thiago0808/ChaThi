@@ -31,20 +31,7 @@
         </header>
 
         <main>
-            <?php
-                require_once 'PHP/conexao.php';
-
-                $sql = 'SELECT * FROM comentario ORDER BY ID DESC LIMIT ';
-                $comentarios = $conexao->query($sql);
-
-                foreach($comentarios as $c){
-                    echo '<div class="coment">';
-                        echo $c["nome"];
-                        echo $c["texto"];
-                    echo '</div>';
-                }
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo in, fuga alias reiciendis iure nostrum harum impedit. Expedita beatae tenetur quaerat voluptas totam rerum omnis illo officiis iste minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo in, fuga alias reiciendis iure nostrum harum impedit. Expedita beatae tenetur quaerat voluptas totam rerum omnis illo officiis iste minus?</p>
             <p>Sit ullam tempora ex eveniet asperiores, culpa quis nisi at cupiditate minus temporibus harum debitis eius ratione delectus perferendis, ipsam aliquam magni. Perspiciatis autem corporis quis, animi delectus ea aspernatur.</p>
             <p>Debitis veritatis facilis tenetur voluptatem cum minus cupiditate, assumenda corporis natus aliquid corrupti sint odit ullam sed in atque! Vitae minus eaque repudiandae error aperiam autem voluptatum eveniet nemo quae?</p>
             <p>Temporibus sed aspernatur dignissimos ducimus praesentium. Minima excepturi quasi, quo ipsam, eveniet hic repellendus, corrupti nulla esse ab dolorum iste ipsum natus ducimus optio voluptatum sequi reprehenderit! Ad, reprehenderit inventore!</p>
@@ -109,7 +96,6 @@
             <p>Hic similique doloribus nostrum nisi odit vel saepe, quidem quod aperiam numquam repudiandae aspernatur consectetur neque veritatis quas dignissimos suscipit sed qui animi accusamus, pariatur ipsum ullam laborum. Mollitia, dolores.</p>
             <p>Accusantium, culpa totam. Quibusdam rem totam animi facere quae fugit voluptate necessitatibus eum ad ducimus itaque quidem accusantium tempora perspiciatis quas, impedit earum voluptates assumenda molestias consectetur! Sint, culpa odio!</p>
             <p>Aliquid, non consectetur velit ullam, iste doloribus magni eveniet dicta, rerum omnis nemo atque repellendus sed expedita reprehenderit. Unde praesentium veritatis ducimus temporibus eaque nihil numquam quibusdam iusto, eveniet laboriosam.</p>
-            ?>
         </main>
 
         <script>
