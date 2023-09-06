@@ -36,6 +36,8 @@
 
                 $sql = "SELECT * FROM comentario ORDER BY id DESC LIMIT 10";
                 $comentarios = $conexao->query($sql);
+                $comentarios = $comentarios->fetchAll();
+                $comentarios = array_reverse($comentarios);
                 foreach($comentarios as $c){
                     echo '<div class="coment">';
                     echo '<h2>';
