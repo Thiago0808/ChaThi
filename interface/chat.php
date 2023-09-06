@@ -1,3 +1,15 @@
+<?php
+    $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+    if (!trim(!$nome)){
+        header("Location: index.html");
+    }
+    $cor = filter_input(INPUT_GET, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
+    urldecode($cor);
+    if (!$cor){
+        header("Location: index.html");
+    }
+?>
+    
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,18 +24,39 @@
     <title>ChaThi</title>
 </head>
 <body>
-    <?php
-        $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-        $cor = filter_input(INPUT_GET, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
-        urldecode($cor)
-    ?>
     
     <div class="container">
         <header>
             <h1><?=$nome?></h1>
         </header>
+
         <main>
+            <?php
+                require_once 'PHP/conexao.php';
+
+                $sql = 'SELECT * FROM comentario ORDER BY ID DESC LIMIT ';
+                $comentarios = $conexao->query($sql);
+
+                foreach($comentarios as $c){
+                    echo '<div class="coment">';
+                        echo $c["nome"];
+                        echo $c["texto"];
+                    echo '</div>';
+                }
+
+
+            ?>
         </main>
+
+        <script>
+            function scroll() {
+                let main=document.querySelector("main");
+                main.scrollTop=main.scrollHeight;
+            }
+
+            scroll();
+        </script>
+
         <form action="../PHP/recebe.php" method="get">
             <input type="hidden" name="nome" value=<?=$nome?>>
             <input type="hidden" name="cor" value=<?=$cor?>>
