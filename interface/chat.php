@@ -40,16 +40,25 @@
                 $comentarios = array_reverse($comentarios);
                 foreach($comentarios as $c){
 
-                    echo '<div class="coment" style="background:'.$c["cor"].'">';
-                        echo '<h2>';
-                            echo $c['nome'];
-                        echo '</h2>';
-                        echo '<p>';
-                            echo $c['texto'];
-                        echo '</p>';
-                        echo '<h3>';
-                            echo $c['dataHora'];
-                        echo '</h3>';
+                    if ((($c["id"])%2)==0 ){
+                        $lado="esq";
+                    }
+                    else{
+                        $lado="dir";
+                    }
+
+                    echo '<div class="'.$lado.'">';
+                        echo '<div class="coment" style="background:'.$c["cor"].'">';
+                            echo '<h2>';
+                                echo $c['nome'];
+                            echo '</h2>';
+                            echo '<p>';
+                                echo $c['texto'];
+                            echo '</p>';
+                            echo '<h3>';
+                                echo $c['dataHora'];
+                            echo '</h3>';
+                        echo '</div>';
                     echo '</div>';
                 }
 

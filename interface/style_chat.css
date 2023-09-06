@@ -28,6 +28,7 @@ main{
     overflow-y: scroll;
     height: 700px;
     padding-left: 6.25%;
+    padding-right: 6.25%;
 }
 
 h2{
@@ -49,7 +50,7 @@ h3{
     padding: 1%;
     margin-top: 1%;
     border-radius: 20px; 
-    max-width: 94%;
+    max-width: 50%;
 }
 
 .input-group{
@@ -84,7 +85,15 @@ textarea{
     min-height: 160%;
 }
 
+.esq{
+    display: flex;
+    justify-content: flex-start;
+}
 
+.dir{
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 
