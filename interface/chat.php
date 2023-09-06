@@ -38,9 +38,15 @@
                 $comentarios = $conexao->query($sql);
                 foreach($comentarios as $c){
                     echo '<div class="coment">';
-                        echo $c['nome'];
-                        echo $c['texto'];
-                        echo $c['dataHora'];
+                    echo '<h2>';
+                    echo $c['nome'];
+                    echo '</h2>';
+                    echo '<p>';
+                    echo $c['texto'];
+                    echo '</p>';
+                    echo '<h3>';
+                    echo $c['dataHora'];
+                    echo '</h3>';
                     echo '</div>';
                 }
 
