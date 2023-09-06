@@ -57,6 +57,10 @@ main{
     padding: 4%;
 }
 
+textarea{
+    min-height: 170%;
+}
+
 
 
 
