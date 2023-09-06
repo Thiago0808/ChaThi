@@ -12,8 +12,8 @@ body{
 
 
 .container{
-    max-width: 800px;
-    padding: 30px;
+    max-width: 1100px;
+    padding: 50px;
     background-color: rgb(255, 255, 255);
     border:3px solid rgb(214, 213, 213);
     border-radius: 5px;
@@ -27,8 +27,8 @@ label{
 
 input{
    
-    margin: 10px;
-    padding: 5px;
+    margin: 9px;
+    padding: 6px;
 }
 
 
@@ -37,10 +37,11 @@ input{
     padding-right: 10px;
 }
 
-.esq{
 
+#colunas{
+    display: flex;
 }
 
-.dir{
-    
+img{
+    max-width: 100%;
 }
