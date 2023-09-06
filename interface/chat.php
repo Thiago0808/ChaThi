@@ -34,7 +34,7 @@
             <?php
                 require '../PHP/conexao.php';
 
-                $sql = "SELECT * FROM comentario ORDER BY id DESC LIMIT 10";
+                $sql = "SELECT * FROM comentario ORDER BY id DESC LIMIT 30";
                 $comentarios = $conexao->query($sql);
                 $comentarios = $comentarios->fetchAll();
                 $comentarios = array_reverse($comentarios);
