@@ -66,6 +66,21 @@
             ?>
         </main>
 
+
+        <form action="../PHP/recebe.php" method="get">
+            <input type="hidden" name="nome" value=<?=$nome?> id="nome">
+            <input type="hidden" name="cor" value=<?=$cor?>>
+            <div class="enviar-mensagem">
+                <div class="input-group">
+                    <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto" id = "msg"></textarea>
+                </div>
+                <div class="botao">
+                    <input type="submit" value="Enviar"  class="btn btn-primary">
+                </div>
+            </div>
+        </form>
+
+
         <script>
             function scroll() {
                 let main=document.querySelector("main");
@@ -73,20 +88,20 @@
             }
 
             scroll();
-        </script>
 
-        <form action="../PHP/recebe.php" method="get">
-            <input type="hidden" name="nome" value=<?=$nome?>>
-            <input type="hidden" name="cor" value=<?=$cor?>>
-            <div class="enviar-mensagem">
-                <div class="input-group">
-                    <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto"></textarea>
-                </div>
-                <div class="botao">
-                    <input type="submit" value="Enviar"  class="btn btn-primary">
-                </div>
-            </div>
-        </form>
+            const nome = document.getElementById("nome")
+            const msg = document.getElementById("msg")
+            const form = document.querySelector("form")
+            form.addEventListener("submit", function(e){
+                e.preventDefault();
+                enviar();
+            });
+
+            function enviar(){
+                
+            }
+
+        </script>
     </div>
 
      <!-- Boostrap -->
