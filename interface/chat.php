@@ -22,8 +22,20 @@
         <header>
             <h1><?=$nome?></h1>
         </header>
+
         <main>
+            
         </main>
+
+        <script>
+            function scroll() {
+                let main=document.querySelector("main");
+                main.scrollTop=main.scrollHeight;
+            }
+
+            scroll();
+        </script>
+
         <form action="../PHP/recebe.php" method="get">
             <input type="hidden" name="nome" value=<?=$nome?>>
             <input type="hidden" name="cor" value=<?=$cor?>>
