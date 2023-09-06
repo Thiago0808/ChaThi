@@ -13,8 +13,9 @@
 </head>
 <body>
     <?php
-        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-        $cor = filter_input(INPUT_POST, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
+        $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+        $cor = filter_input(INPUT_GET, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
+        urldecode($cor)
     ?>
     
     <div class="container">
@@ -23,7 +24,7 @@
         </header>
         <main>
         </main>
-        <form action="../PHP/recebe.php" method="post">
+        <form action="../PHP/recebe.php" method="get">
             <input type="hidden" name="nome" value=<?=$nome?>>
             <input type="hidden" name="cor" value=<?=$cor?>>
             <div class="enviar-mensagem">
