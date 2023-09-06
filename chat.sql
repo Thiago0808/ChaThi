@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 06-Set-2023 às 20:10
+-- Tempo de geração: 06-Set-2023 às 21:16
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `comentario` (
   `id` int(11) NOT NULL,
   `texto` varchar(1000) DEFAULT NULL,
-  `dataHora` datetime NOT NULL,
+  `dataHora` datetime DEFAULT current_timestamp(),
   `nome` varchar(100) NOT NULL,
   `cor` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,25 +40,14 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`id`, `texto`, `dataHora`, `nome`, `cor`) VALUES
-(1, 'rfdgdxzvsrt3634tfg423r', '2023-08-15 17:03:06', 'fadsfwa4f4wt4wt554', 'gsag435'),
-(2, 'Testando', '2023-09-06 13:47:34', 'Thiago', '#ef2929'),
-(3, 'fhhshfs', '2023-09-06 13:51:44', 'Thiago', '#ef2929'),
-(4, 'Por favor funciona', '2023-09-06 14:01:22', 'Thiago', '#729fcf'),
-(5, 'Estudem', '2023-09-06 14:04:56', 'IFSC', '#4e9a06'),
-(6, 'Estudem', '2023-09-06 14:05:57', 'IFSC', '#4e9a06'),
-(7, 'Estudis', '2023-09-06 14:06:26', 'IFSC', '#4e9a06'),
-(8, 'Teste', '2023-09-06 14:48:00', 'Thiago', '#ef2929'),
-(9, 'Teste', '2023-09-06 14:49:00', 'Thiago', '#ef2929'),
-(10, 'Teste', '2023-09-06 14:51:00', 'Thiago', '#204a87'),
-(11, 'ywyawr', '2023-09-06 14:51:00', 'Teste', '#8f5902'),
-(12, 'fshsfh', '2023-09-06 14:51:00', 'hsfhs', '#fce94f'),
-(13, 'rtrwtrwtRW', '2023-09-06 14:52:00', 'trtrtr', '#f57900'),
-(14, 'oi', '2023-09-06 14:53:00', 'tESTANDO', '#75507b'),
-(15, 'Ola', '2023-09-06 14:54:00', 'tESTANDO', ''),
-(16, 'Bom dia', '2023-09-06 14:55:00', 'Thiago', '#ef2929'),
-(17, 'Boa tarde', '2023-09-06 14:55:00', 'Thiago', ''),
-(18, 'Estudem', '2023-09-06 14:57:00', 'Miguel', '#3465a4'),
-(19, 'Estudem, com gentileza', '2023-09-06 14:57:00', 'Miguel', '#3465a4');
+(20, 'Oi tudo bom, como vocês estão cambada, To fazendo código, bla bla', '2023-09-06 15:36:00', 'Aline', '#000000'),
+(21, 'Tudo bem aqui, e com você? &#13;&#10;Tô pensando na vida', '2023-09-06 15:37:00', 'Thiago', '#75507b'),
+(22, 'PROCESSO!!!', '2023-09-06 15:37:00', 'Yuri', '#4e9a06'),
+(23, 'vcs humanos são uns porcarias, quero comida, auuuuuuuuuuuu', '2023-09-06 15:39:00', 'Jack', '#ef2929'),
+(24, 'auuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu', '2023-09-06 15:39:00', 'Jack', '#ef2929'),
+(25, 'sério&#13;&#10;', '2023-09-06 16:10:00', 'José', '#ef2929'),
+(26, 'aaaaaaaaaaaaa', '2023-09-06 16:10:00', 'José', '#ef2929'),
+(27, 'aaaaaaaaa', '2023-09-06 16:10:00', 'José', '#ef2929');
 
 --
 -- Índices para tabelas despejadas
@@ -78,7 +67,7 @@ ALTER TABLE `comentario`
 -- AUTO_INCREMENT de tabela `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
