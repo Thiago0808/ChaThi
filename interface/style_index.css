@@ -11,13 +11,13 @@ body{
 
 
 .container{
-    
-    max-width: 1000px;
-    padding: 100px;
+    line-height: 15px;
+    max-width: 11110px;
+    padding: 280px;
+    padding-inline:500px ;
     background-color: rgb(255, 255, 255);
-    border:3px solid rgb(255, 255, 255);
-    border-radius: 5px;
 }
+    
 
 label{
     line-height: 1px;
@@ -53,3 +53,4 @@ label{
 img{
     max-width: 100%;
 }
+
