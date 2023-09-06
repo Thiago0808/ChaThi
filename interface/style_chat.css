@@ -37,6 +37,8 @@ h2{
 
 p{
     font-size: 1.2rem;
+    max-width: 100%;
+    hyphens: auto;
 }
 
 h3{
@@ -47,7 +49,7 @@ h3{
     padding: 1%;
     margin-top: 1%;
     border-radius: 20px; 
-    max-width: 45%;
+    max-width: 94%;
 }
 
 .input-group{
