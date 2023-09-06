@@ -29,6 +29,10 @@ main{
     height: 700px;
 }
 
+p{
+    padding-left: 6.25%;
+}
+
 .input-group{
     padding-left: 6.25%;
 }
