@@ -40,6 +40,9 @@ p{
     font-size: 1.2rem;
     max-width: 100%;
     hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 h3{
