@@ -40,11 +40,11 @@
                 $comentarios = array_reverse($comentarios);
                 foreach($comentarios as $c){
 
-                    if ((($c["id"])%2)==0 ){
-                        $lado="esq";
+                    if ($c["nome"]==$nome){
+                        $lado="dir";
                     }
                     else{
-                        $lado="dir";
+                        $lado="esq";
                     }
 
                     echo '<div class="'.$lado.'">';
