@@ -29,6 +29,10 @@ label{
 
 }
 
+.p-2{
+    margin-top: 3%;
+}
+
 .colnom{
     margin: 2%;
     margin-left: 20%;
@@ -37,8 +41,16 @@ label{
 
 .button{
     margin-left: 20%;
+    margin-top: 9%;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+.dropdown{
+    margin-left: 18%;
     margin-top: 5%;
-    padding: 2%;
 }
 
 #colunas{
