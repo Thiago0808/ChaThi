@@ -1,18 +1,21 @@
 <?php
 require 'conexao.php';
 
-$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 
-$sql = "SELECT * FROM comentario WHERE id>$id";
+$sql = "SELECT * FROM comentario ORDER BY id DESC";
 $mensagens = $conexao->query($sql);
 
-foreach($mensagens as $m){
-    echo $m['nome'];
-    echo $m['datahora'];
-    echo $m['texto'];
-}
+$dados = $mensagens->fetchAll(PDO::FETCH_ASSOC);
+$dados = array_reverse($dados);
+echo json_encode($dados);
 
-header('Location: ../interface/chat.php');
+// foreach($mensagens as $m){
+//     echo $m['nome'];
+//     echo $m['datahora'];
+//     echo $m['texto'];
+// }
+
+//header('Location: ../interface/chat.php');
 ?>
 
