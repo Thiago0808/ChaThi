@@ -55,6 +55,7 @@ label{
 
 #colunas{
     display: flex;
+    max-width: 1000px;
 }
 
 img{
@@ -72,6 +73,8 @@ img{
 .nome{
     padding-top: 5%;
 }
+
+
 
 
 
