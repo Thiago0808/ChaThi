@@ -82,8 +82,8 @@
         
 
         <script>
+            let main=document.querySelector("main");
             function scroll() {
-                let main=document.querySelector("main");
                 main.scrollTop=main.scrollHeight;
             }
 
@@ -119,6 +119,17 @@
                     console.log(resposta)
                 });
             }
+
+            function receber(){
+                fetch ("../PHP/ler.php")
+                .then(function(resposta){
+                    console.log(resposta)
+                    return resposta.json();
+                }).then(function(resposta){
+                    console.log(resposta)
+                });
+            }
+            receber();
 
         </script>
     </div>
