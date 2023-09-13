@@ -126,9 +126,16 @@
                     console.log(resposta)
                     return resposta.json();
                 }).then(function(resposta){
-                    console.log(resposta)
+                    resposta.forEach(function(r){
+                        main.innerHTML += r.nome;
+                        main.innerHTML += r.texto;
+                        main.innerHTML += r.dataHora;
+                        rolar();
+                    });
                 });
             }
+            // setInterval
+            setInterval(receber, 3000)
             receber();
 
         </script>
