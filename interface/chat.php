@@ -34,28 +34,52 @@
             <?php
                 require '../PHP/conexao.php';
 
-                $sql = "SELECT * FROM comentario ORDER BY id DESC LIMIT 10";
+                $sql = "SELECT * FROM comentario ORDER BY id DESC LIMIT 30";
                 $comentarios = $conexao->query($sql);
                 $comentarios = $comentarios->fetchAll();
                 $comentarios = array_reverse($comentarios);
                 foreach($comentarios as $c){
 
-                    echo '<div class="coment" style="background:'.$c["cor"].'">';
-                    echo '<h2>';
-                    echo $c['nome'];
-                    echo '</h2>';
-                    echo '<p>';
-                    echo $c['texto'];
-                    echo '</p>';
-                    echo '<h3>';
-                    echo $c['dataHora'];
-                    echo '</h3>';
+                    if ($c["nome"]==$nome){
+                        $lado="dir";
+                    }
+                    else{
+                        $lado="esq";
+                    }
+
+                    echo '<div class="'.$lado.'">';
+                        echo '<div class="coment" style="background:'.$c["cor"].'">';
+                            echo '<h2>';
+                                echo $c['nome'];
+                            echo '</h2>';
+                            echo '<p>';
+                                echo $c['texto'];
+                            echo '</p>';
+                            echo '<h3>';
+                                echo $c['dataHora'];
+                            echo '</h3>';
+                        echo '</div>';
                     echo '</div>';
                 }
 
 
             ?>
         </main>
+
+
+        <form action="../PHP/recebe.php" method="get">
+            <input type="hidden" name="nome" value="<?php echo $nome?>" id="nome">
+            <input type="hidden" name="cor" value=<?=$cor?>>
+            <div class="enviar-mensagem">
+                <div class="input-group">
+                    <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto" id = "msg"></textarea>
+                </div>
+                <div class="botao">
+                    <input type="submit" value="Enviar"  class="btn btn-primary">
+                </div>
+            </div>
+        </form>
+
 
         <script>
             function scroll() {
@@ -64,20 +88,21 @@
             }
 
             scroll();
-        </script>
 
-        <form action="../PHP/recebe.php" method="get">
-            <input type="hidden" name="nome" value=<?=$nome?>>
-            <input type="hidden" name="cor" value=<?=$cor?>>
-            <div class="enviar-mensagem">
-                <div class="input-group">
-                    <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto"></textarea>
-                </div>
-                <div class="botao">
-                    <input type="submit" value="Enviar"  class="btn btn-primary">
-                </div>
-            </div>
-        </form>
+            const nome = document.getElementById("nome")
+            console.log(nome.value)
+            const msg = document.getElementById("msg")
+            const form = document.querySelector("form")
+            form.addEventListener("submit", function(e){
+                e.preventDefault();
+                enviar();
+            });
+
+            function enviar(){
+                
+            }
+
+        </script>
     </div>
 
      <!-- Boostrap -->

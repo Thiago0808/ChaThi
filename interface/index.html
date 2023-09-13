@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -21,18 +21,31 @@
                 <img src="imagens/Chathi-removebg-preview 1.png" alt="">
     
                 <form action="chat.php" method="get">
-                    <div>
+                    <div class="nome">
                         <label for="nome">Nome</label>
-                        <input class= "colnom form-control" type="text" name="nome" id="nome" placeholder="" required>
+                        <input class= "colnom form-control" type="search" name="nome" id="nome" placeholder="" required>
                     </div>
-                    <div>
+                    <div class="cores">
                         <label for="cor">Cor da mensagem</label>
                         <input class= "colcor"  type="color" name="cor" id="cor" placeholder="" required>
                     </div>
-                    <div>
-                        <input class="button btn btn-primary" type="submit" value="Conversar">
+                    <div class="d-flex flex-row bd-highlight mb-3">
+                        <div class="dropdown p-2 bd-highlight">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                              Grupos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Estudos</a>
+                                <a class="dropdown-item" href="#">Jogos</a>
+                                <a class="dropdown-item" href="#">Trabalho</a>
+                            </div>
+                        </div>
+                        <div class="p-2 bd-highlight">
+                            <input class="button btn btn-primary p-2 bd-highlight" type="submit" value="Conversar!">
+                        </div>
                     </div>
                 </form>
+
             </div>
 
             <div class="espaco"></div>

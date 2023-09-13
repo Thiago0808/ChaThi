@@ -3,48 +3,55 @@ body{
 
 }
 
-
 *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .container{
     line-height: 15px;
-    max-width: 11110px;
-    padding: 280px;
-    padding-inline:500px ;
+    max-width: 100%;
+    padding: 11%;
     background-color: rgb(255, 255, 255);
 }
-    
 
 label{
-    line-height: 1px;
-    margin-left: 100px;
+    margin-left: 20%;
     padding-right: 10px;
     margin-bottom: .1em;
 }
 
 .colcor{
-    margin: 10px;
-    padding: 5px;
-    margin-left: 5px;
+    margin: 2%;
+    margin-left: 20%;
     padding-right: 5px;
+    display: block;
+
+}
+
+.p-2{
+    margin-top: 3%;
 }
 
 .colnom{
-    margin: 10px;
-    padding: 5px;
-    margin-left: 100px;
+    margin: 2%;
+    margin-left: 20%;
     padding-right: 10px;
 }
 
 .button{
-    margin-left: 100px;
-    padding-right: 7px;
+    margin-left: 20%;
+    margin-top: 9%;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
 }
 
+.dropdown{
+    margin-left: 18%;
+    margin-top: 5%;
+}
 
 #colunas{
     display: flex;
@@ -52,9 +59,21 @@ label{
 }
 
 img{
-    margin-left: 100px;
-    max-width: 100%;
+    margin-left: 12%;
 }
+
+.cores{
+    padding-top: 5%;
+}
+
+.lado{
+    margin-left: 20%;
+}
+
+.nome{
+    padding-top: 5%;
+}
+
 
 
 

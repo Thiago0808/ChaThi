@@ -13,7 +13,7 @@ if ($nome && $texto){
 
 
 #redireciona
-header('Location: ../interface/chat.php?nome='.$nome.'&cor='.urlencode($cor).' ');
+header('Location: ../interface/chat.php?nome='."$nome".'&cor='.urlencode($cor).' ');
 
 
 

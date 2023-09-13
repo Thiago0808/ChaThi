@@ -28,6 +28,7 @@ main{
     overflow-y: scroll;
     height: 700px;
     padding-left: 6.25%;
+    padding-right: 6.25%;
 }
 
 h2{
@@ -37,6 +38,11 @@ h2{
 
 p{
     font-size: 1.2rem;
+    max-width: 100%;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 h3{
@@ -44,10 +50,11 @@ h3{
 }
 
 .coment{
-    padding: 1%;
-    margin-top: 1%;
+    padding: 20px;
+    margin-top: 2%;
     border-radius: 20px; 
-    max-width: 45%;
+    max-width: 50%;
+    margin-bottom: 2%;
 }
 
 .input-group{
@@ -82,7 +89,15 @@ textarea{
     min-height: 160%;
 }
 
+.esq{
+    display: flex;
+    justify-content: flex-start;
+}
 
+.dir{
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 
