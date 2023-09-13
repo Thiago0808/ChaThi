@@ -99,7 +99,7 @@
             });
 
             function enviar(){
-                
+                alert("Vai enviar de forma assíncrona")
             }
 
         </script>
