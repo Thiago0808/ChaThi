@@ -67,6 +67,8 @@
         </main>
         
 
+        
+
         <form action="../PHP/recebe.php" method="get">
             <input type="hidden" name="nome" value="<?php echo $nome?>" id="nome">
             <input type="hidden" name="cor" value=<?=urlencode($cor)?> id="cor">
