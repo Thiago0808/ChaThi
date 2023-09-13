@@ -48,11 +48,14 @@ label{
 
 #colunas{
     display: flex;
+    max-width: 1000px;
 }
 
 img{
     margin-left: 100px;
     max-width: 100%;
 }
+
+
 
 
