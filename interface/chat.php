@@ -69,10 +69,10 @@
 
         <form action="../PHP/recebe.php" method="get">
             <input type="hidden" name="nome" value="<?php echo $nome?>" id="nome">
-            <input type="hidden" name="cor" value=<?=$cor?>>
+            <input type="hidden" name="cor" value=<?=urlencode($cor)?> id="cor">
             <div class="enviar-mensagem">
                 <div class="input-group">
-                    <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto" id = "msg"></textarea>
+                    <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto" id = "texto"></textarea>
                 </div>
                 <div class="botao">
                     <input type="submit" value="Enviar"  class="btn btn-primary">
@@ -91,7 +91,9 @@
 
             const nome = document.getElementById("nome")
             console.log(nome.value)
-            const msg = document.getElementById("msg")
+            const cor = document.getElementById("cor")
+            console.log(cor.value)
+            const texto = document.getElementById("texto")
             const form = document.querySelector("form")
             form.addEventListener("submit", function(e){
                 e.preventDefault();
@@ -99,7 +101,23 @@
             });
 
             function enviar(){
-                alert("Vai enviar de forma assíncrona")
+                //let data = new FormData();
+                //data.append("nome", nome.value)
+                //data.append("texto", texto.value);
+                //data.append("cor", cor.value)
+
+                fetch(`../PHP/recebe.php?nome=${nome.value}&texto=${texto.value}&cor=${cor.value}`, {
+                    //method: "GET",
+                    //body: data
+                }).then(function(resposta){
+                    if (!resposta.ok){
+                        alert("Não foi possível enviar");
+                    }
+                    else{
+                        texto.value="";
+                    }
+                    console.log(resposta)
+                });
             }
 
         </script>
