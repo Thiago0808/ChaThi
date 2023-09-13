@@ -65,8 +65,6 @@
 
             ?>
         </main>
-
-
         
 
         <form action="../PHP/recebe.php" method="get">
