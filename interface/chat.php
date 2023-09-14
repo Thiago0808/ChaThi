@@ -14,8 +14,6 @@
     }
 ?>
     
-
-    
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -68,10 +66,8 @@
                     echo '</div>';
                 }
 
-
             ?>
         </main>
-        
 
         <form action="../PHP/recebe.php" method="get">
             <input type="hidden" name="nome" value="<?php echo $nome?>" id="nome">
@@ -85,7 +81,6 @@
                 </div>
             </div>
         </form>
-        
 
         <script>
             let main=document.querySelector("main");

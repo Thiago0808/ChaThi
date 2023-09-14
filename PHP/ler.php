@@ -1,8 +1,6 @@
 <?php
 require 'conexao.php';
 
-
-
 $sql = "SELECT * FROM comentario ORDER BY id DESC";
 $mensagens = $conexao->query($sql);
 

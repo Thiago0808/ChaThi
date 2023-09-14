@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style_index.css">
     <link rel="icon" href="imagens/icone.png" type="image/x-icon">
@@ -55,11 +55,7 @@
                 <img class="lado" src="imagens/undraw_chat_re_re1u 1.png" alt="">
             </div>
         </div>
-        
-
     </div>
-
-
 
     <!-- Boostrap -->
     <!-- Optional JavaScript; choose one of the two! -->
