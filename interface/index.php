@@ -34,19 +34,17 @@
                         <input class= "colcor"  type="color" name="cor" id="cor" placeholder="" required>
                     </div>
                     <div class="d-flex flex-row bd-highlight mb-3">
-                        <div class="dropdown p-2 bd-highlight">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                              Temas
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" id="dropdown" name="dropdown" value="estudos" href="?tema=estudos">Estudos</a>
-                                <a class="dropdown-item" id="dropdown" name="dropdown" value="jogos" href="#">Jogos</a>
-                                <a class="dropdown-item" id="dropdown" name="dropdown" value="trabalhos" href="#">Trabalho</a>
-                                <a class="dropdown-item" id="dropdown" name="dropdown" value="cozinheiros" href="#">Cozinheiros</a>
-                                <a class="dropdown-item" id="dropdown" name="dropdown" value="programadores" href="#">Programadores</a>
-                                <a class="dropdown-item" id="dropdown" name="dropdown" value="livros" href="#">Livros</a>
-                            </div>
-                        </div> 
+                        <div class="p-2 bd-highlight temas">
+                            <label for="exampleFormControlSelect1">Temas</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option value="estudos">Estudos</option>
+                                <option value="jogos">Jogos</option>
+                                <option value="trabalhos">Trabalhos</option>
+                                <option value="cozinheiros">cozinheiros</option>
+                                <option value="programadores">programadores</option>
+                                <option value="livros">Livros</option>
+                            </select>
+                        </div>
                         <div class="p-2 bd-highlight">
                             <input class="button btn btn-primary p-2 bd-highlight" type="submit" value="Conversar!">
                         </div>

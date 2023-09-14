@@ -9,7 +9,6 @@
         header("Location: index.php");
     }
     $tema = filter_input(INPUT_GET, 'dropdown', FILTER_SANITIZE_SPECIAL_CHARS);
-    urldecode($tema);
     if (!trim($tema)){
         header("Location: index.php");
     }
