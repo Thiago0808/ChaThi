@@ -36,8 +36,8 @@
                                 <option value="estudos">Estudos</option>
                                 <option value="jogos">Jogos</option>
                                 <option value="trabalhos">Trabalhos</option>
-                                <option value="cozinheiros">cozinheiros</option>
-                                <option value="programadores">programadores</option>
+                                <option value="cozinheiros">Cozinheiros</option>
+                                <option value="programadores">Programadores</option>
                                 <option value="livros">Livros</option>
                             </select>
                         </div>

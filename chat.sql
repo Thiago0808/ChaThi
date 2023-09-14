@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 06-Set-2023 às 22:00
+-- Host: 127.0.0.1
+-- Tempo de geração: 15-Set-2023 às 01:49
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -32,24 +32,21 @@ CREATE TABLE `comentario` (
   `texto` varchar(1000) DEFAULT NULL,
   `dataHora` datetime DEFAULT current_timestamp(),
   `nome` varchar(100) NOT NULL,
-  `cor` varchar(8) NOT NULL
+  `cor` varchar(8) NOT NULL,
+  `tema` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `comentario`
 --
 
-INSERT INTO `comentario` (`id`, `texto`, `dataHora`, `nome`, `cor`) VALUES
-(20, 'Oi tudo bom, como vocês estão cambada, To fazendo código, bla bla', '2023-09-06 15:36:00', 'Aline', '#FFD336'),
-(21, 'Tudo bem aqui, e com você? &#13;&#10;Tô pensando na vida', '2023-09-06 15:37:00', 'Thiago', '#6FFFF6'),
-(22, 'PROCESSO!!!', '2023-09-06 15:37:00', 'Yuri', '#FF5F5F'),
-(23, 'vcs humanos são uns porcarias, quero comida, auuuuuuuuuuuu', '2023-09-06 15:39:00', 'Jack', '#FF78C9'),
-(24, 'auuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu', '2023-09-06 15:39:00', 'Jack', '#FF78C9'),
-(25, 'sério&#13;&#10;', '2023-09-06 16:10:00', 'José', '#BBFF65'),
-(26, 'aaaaaaaaaaaaa', '2023-09-06 16:10:00', 'José', '#BBFF65'),
-(27, 'aaaaaaaaa', '2023-09-06 16:10:00', 'José', '#BBFF65'),
-(28, 'teste&#13;&#10;', '2023-09-06 16:56:22', 'Aline', '#9586ff'),
-(29, 'ue', '2023-09-06 16:56:54', 'Aline', '#9586ff');
+INSERT INTO `comentario` (`id`, `texto`, `dataHora`, `nome`, `cor`, `tema`) VALUES
+(33, 'Olá a todos! Espero que estejam tendo um ótimo dia. Tenho que compartilhar algo empolgante: comecei a ler &#34;Cem Anos de Solidão&#34; de Gabriel García Márquez e estou completamente cativada pela narrativa mágica deste livro.', '2023-09-13 21:12:21', 'Alice', '#ffd336', 'Livros'),
+(34, 'Olá, Alice! Que escolha maravilhosa. &#34;Cem Anos de Solidão&#34; é uma obra-prima da literatura latino-americana. O realismo mágico de Márquez é fascinante. Como você descreveria a experiência de leitura até agora?', '2023-09-13 21:16:35', 'Bob', '#bbff65', 'Livros'),
+(35, 'Uma das coisas que mais me impressionam é a linguagem de Márquez. Sua prosa é poética e evocativa. Ele cria imagens vívidas e emocionantes com suas palavras', '2023-09-13 21:17:22', 'Bob', '#bbff65', 'Livros'),
+(36, 'Olá a todos! Fico feliz em participar desta conversa sobre um livro tão impactante. Li &#34;Cem Anos de Solidão&#34; há alguns anos e ainda me lembro da sensação de estar imerso em um mundo mágico e surreal. É impressionante como o livro reflete as complexidades da América Latina', '2023-09-13 21:20:35', 'David', '#6ffff6', 'Livros'),
+(37, 'Há um outro livro que leram para compartilhar a experiência?', '2023-09-13 21:21:22', 'David', '#6ffff6', 'Livros'),
+(38, 'Ou filme?', '2023-09-13 21:22:03', 'David', '#6ffff6', 'Livros');
 
 --
 -- Índices para tabelas despejadas
@@ -69,7 +66,7 @@ ALTER TABLE `comentario`
 -- AUTO_INCREMENT de tabela `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
