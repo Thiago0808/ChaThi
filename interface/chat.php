@@ -1,12 +1,17 @@
 <?php
     $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
     if (!trim($nome)){
-        header("Location: index.html");
+        header("Location: index.php");
     }
     $cor = filter_input(INPUT_GET, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
     urldecode($cor);
     if (!trim($cor)){
-        header("Location: index.html");
+        header("Location: index.php");
+    }
+    $tema = filter_input(INPUT_GET, 'dropdown', FILTER_SANITIZE_SPECIAL_CHARS);
+    urldecode($tema);
+    if (!trim($tema)){
+        header("Location: index.php");
     }
 ?>
     
@@ -106,7 +111,7 @@
                 //data.append("texto", texto.value);
                 //data.append("cor", cor.value)
 
-                fetch(`../PHP/recebe.php?nome=${nome.value}&texto=${texto.value}&cor=${cor.value}`, {
+                fetch(`../PHP/recebe.php?nome=${nome.value}&texto=${texto.value}&cor=${cor.value}&tema=${tema.value}`, {
                     //method: "GET",
                     //body: data
                 }).then(function(resposta){
@@ -135,7 +140,7 @@
                 });
             }
             // setInterval
-            setInterval(receber, 3000)
+            //setInterval(receber, 3000)
             receber();
 
         </script>
