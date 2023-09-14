@@ -8,7 +8,7 @@
     if (!trim($cor)){
         header("Location: index.php");
     }
-    $tema = filter_input(INPUT_GET, 'dropdown', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tema = filter_input(INPUT_GET, 'temas', FILTER_SANITIZE_SPECIAL_CHARS);
     if (!trim($tema)){
         header("Location: index.php");
     }
