@@ -1,7 +1,3 @@
-<?php
-    $tema = filter_input(INPUT_GET, 'tema', FILTER_SANITIZE_SPECIAL_CHARS);
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 

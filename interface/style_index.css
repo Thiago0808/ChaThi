@@ -41,7 +41,7 @@ label{
 
 .button{
     margin-left: 15%;
-    margin-top: 24%;
+    margin-top: 39%;
     padding-top: 6px !important;
     padding-bottom: 6px !important;
     padding-left: 12px !important;
@@ -55,6 +55,7 @@ label{
 
 .temas label{
     margin-left: 0;
+    margin-bottom: 1em;
 }
 
 #colunas{
