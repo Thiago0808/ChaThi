@@ -106,7 +106,13 @@
                 }).then(function(resposta){
                     resposta.forEach(function(r){
 
-                        main.innerHTML += `<div class="">  
+                        let lado = "esq";
+                        if (r.nome == h1.innerHTML){
+                            console.log(1)
+                            lado = "dir";
+                        }
+
+                        main.innerHTML += `<div class=${lado}>  
                                                 <div class="coment" style="background:${r.cor}">  
                                                     <h2> ${r.nome} </h2> 
                                                     <p> ${r.texto} </p>  
