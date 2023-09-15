@@ -37,40 +37,8 @@
         <main>
             <?php
                 $sql = "SELECT * FROM comentario WHERE tema='$tema' ORDER BY id DESC";
-                echo $sql;
             ?>
-            <!-- <?php
-                require '../PHP/conexao.php';
-
-                $sql = "SELECT * FROM comentario ORDER BY id DESC LIMIT 30";
-                $comentarios = $conexao->query($sql);
-                $comentarios = $comentarios->fetchAll();
-                $comentarios = array_reverse($comentarios);
-                foreach($comentarios as $c){
-
-                    if ($c["nome"]==$nome){
-                        $lado="dir";
-                    }
-                    else{
-                        $lado="esq";
-                    }
-
-                    echo '<div class="'.$lado.'">';
-                        echo '<div class="coment" style="background:'.$c["cor"].'">';
-                            echo '<h2>';
-                                echo $c['nome'];
-                            echo '</h2>';
-                            echo '<p>';
-                                echo $c['texto'];
-                            echo '</p>';
-                            echo '<h3>';
-                                echo $c['dataHora'];
-                            echo '</h3>';
-                        echo '</div>';
-                    echo '</div>';
-                }
-
-            ?> -->
+      
         </main>
 
         <form action="../PHP/recebe.php" method="get">
@@ -103,6 +71,7 @@
             console.log(tema.value)
             const texto = document.getElementById("texto")
             const form = document.querySelector("form")
+            const h1 = document.querySelector("h1")
             form.addEventListener("submit", function(e){
                 e.preventDefault();
                 enviar();
@@ -136,10 +105,16 @@
                     return resposta.json();
                 }).then(function(resposta){
                     resposta.forEach(function(r){
-                        main.innerHTML += r.nome;
-                        main.innerHTML += r.texto;
-                        main.innerHTML += r.dataHora;
-                        rolar();
+
+                        main.innerHTML += `<div class="">  
+                                                <div class="coment" style="background:${r.cor}">  
+                                                    <h2> ${r.nome} </h2> 
+                                                    <p> ${r.texto} </p>  
+                                                    <h3> ${r.dataHora} </h3>
+                                                </div>
+                                            </div>`;
+
+                        scroll();
                     });
                 });
             }
