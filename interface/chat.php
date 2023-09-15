@@ -8,7 +8,7 @@
     if (!trim($cor)){
         header("Location: index.php");
     }
-    $tema = filter_input(INPUT_GET, 'temas', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tema = filter_input(INPUT_GET, 'tema', FILTER_SANITIZE_SPECIAL_CHARS);
     if (!trim($tema)){
         header("Location: index.php");
     }
@@ -36,6 +36,10 @@
 
         <main>
             <?php
+                $sql = "SELECT * FROM comentario WHERE tema='$tema' ORDER BY id DESC";
+                echo $sql;
+            ?>
+            <!-- <?php
                 require '../PHP/conexao.php';
 
                 $sql = "SELECT * FROM comentario ORDER BY id DESC LIMIT 30";
@@ -66,12 +70,13 @@
                     echo '</div>';
                 }
 
-            ?>
+            ?> -->
         </main>
 
         <form action="../PHP/recebe.php" method="get">
             <input type="hidden" name="nome" value="<?php echo $nome?>" id="nome">
             <input type="hidden" name="cor" value=<?=urlencode($cor)?> id="cor">
+            <input type="hidden" name="tema" value=<?=$tema?> id="tema">
             <div class="enviar-mensagem">
                 <div class="input-group">
                     <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto" id = "texto"></textarea>
@@ -94,6 +99,8 @@
             console.log(nome.value)
             const cor = document.getElementById("cor")
             console.log(cor.value)
+            const tema = document.getElementById("tema")
+            console.log(tema.value)
             const texto = document.getElementById("texto")
             const form = document.querySelector("form")
             form.addEventListener("submit", function(e){
@@ -122,7 +129,8 @@
             }
 
             function receber(){
-                fetch ("../PHP/ler.php")
+                console.log("oi")
+                fetch (`../PHP/ler.php?tema=${tema.value}`,)
                 .then(function(resposta){
                     console.log(resposta)
                     return resposta.json();

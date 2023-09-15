@@ -32,13 +32,13 @@
                     <div class="d-flex flex-row bd-highlight mb-3">
                         <div class="p-2 bd-highlight temas">
                             <label for="exampleFormControlSelect1">Temas</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option value="estudos">Estudos</option>
-                                <option value="jogos">Jogos</option>
-                                <option value="trabalhos">Trabalhos</option>
-                                <option value="cozinheiros">Cozinheiros</option>
-                                <option value="programadores">Programadores</option>
-                                <option value="livros">Livros</option>
+                            <select class="form-control" id="exampleFormControlSelect1" name="tema">
+                                <option>Estudos</option>
+                                <option>Jogos</option>
+                                <option>Trabalhos</option>
+                                <option>Cozinheiros</option>
+                                <option>Programadores</option>
+                                <option>Livros</option>
                             </select>
                         </div>
                         <div class="p-2 bd-highlight">

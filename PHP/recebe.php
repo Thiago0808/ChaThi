@@ -11,13 +11,6 @@ if ($nome && $texto && $tema){
 }
 
 #redireciona
-header('Location: ../interface/chat.php?nome='."$nome".'&cor='.urlencode($cor).' ');
-
-
-
-
-
-
-
+header('Location: ../interface/chat.php?nome='."$nome".'&cor='.urlencode($cor).'&tema='.$tema.'');
 
 ?>
