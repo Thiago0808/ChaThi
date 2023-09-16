@@ -20,6 +20,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Fonte Inter 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    
+    <!-- Fonte Inter 200 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
@@ -32,6 +42,7 @@
     <div class="container">
         <header>
             <h1><?=$nome?></h1>
+            <h4>Tema: <?=$tema?></h4>
         </header>
 
         <main>
@@ -57,6 +68,11 @@
 
         <script>
             let main=document.querySelector("main");
+            const tema = document.getElementById("tema");
+            const form = document.querySelector("form")
+            main.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
+            form.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
+
             function scroll() {
                 main.scrollTop=main.scrollHeight;
             }
@@ -67,10 +83,8 @@
             console.log(nome.value)
             const cor = document.getElementById("cor")
             console.log(cor.value)
-            const tema = document.getElementById("tema")
             console.log(tema.value)
             const texto = document.getElementById("texto")
-            const form = document.querySelector("form")
             const h1 = document.querySelector("h1")
             form.addEventListener("submit", function(e){
                 e.preventDefault();

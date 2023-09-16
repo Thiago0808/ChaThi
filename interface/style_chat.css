@@ -12,6 +12,10 @@ body{
 
 header{
     background-color: white;
+    padding-left: 6.25%;
+    padding-top: 1.8%;
+    padding-bottom: 1.8%;
+    font-family: 'Inter', sans-serif;
 }
 
 h1{
@@ -19,9 +23,17 @@ h1{
     font-weight: normal; 
     padding: 0;
     margin: 0;
-    padding-left: 6.25%;
-    padding-top: 1.8%;
-    padding-bottom: 1.8%;
+    margin-bottom: 0.5rem;
+
+}
+
+h4{
+    color: #000;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+
 }
 
 main{
@@ -29,6 +41,7 @@ main{
     height: 700px;
     padding-left: 6.25%;
     padding-right: 6.25%;
+    background: lightgray 0% 0% / repeat;
 }
 
 h2{
@@ -55,6 +68,7 @@ h3{
     border-radius: 20px; 
     max-width: 50%;
     margin-bottom: 1.3%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .input-group{
@@ -80,6 +94,10 @@ h3{
     padding-left: 2%;
 }
 
+input[type=submit]{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .btn{
     font-size: 1.3rem;
     padding: 4%;
@@ -87,6 +105,7 @@ h3{
 
 textarea{
     min-height: 160%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .esq{
@@ -97,6 +116,10 @@ textarea{
 .dir{
     display: flex;
     justify-content: flex-end;
+}
+
+form{
+    padding-bottom: 52px;
 }
 
 
