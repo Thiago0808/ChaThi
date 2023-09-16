@@ -70,8 +70,8 @@
             let main=document.querySelector("main");
             const tema = document.getElementById("tema");
             const form = document.querySelector("form")
-            const body= document.querySelector("body")
-            body.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
+            main.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
+            form.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
 
             function scroll() {
                 main.scrollTop=main.scrollHeight;
