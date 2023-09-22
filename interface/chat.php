@@ -111,6 +111,7 @@
                 });
             }
 
+            let verificar = 0
             function receber(){
                 console.log("oi")
                 fetch (`../PHP/ler.php?tema=${tema.value}`,)
@@ -119,6 +120,7 @@
                     return resposta.json();
                 }).then(function(resposta){
                     resposta.forEach(function(r){
+                        verificar = 1
 
                         let lado = "esq";
                         if (r.nome == h1.innerHTML){
@@ -136,6 +138,14 @@
 
                         scroll();
                     });
+                    if (verificar==0){
+                        main.innerHTML += `<div class="esq">  
+                                                <div class="coment" style="background: white">  
+                                                    <h2> Mensagem Oficial </h2> 
+                                                    <p> Não há mensagens neste grupo. Seja o primeiro a enviar! </p>  
+                                                </div>
+                                            </div>`;
+                    }
                 });
             }
             // setInterval
