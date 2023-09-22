@@ -142,7 +142,7 @@
                         main.innerHTML += `<div class="esq">  
                                                 <div class="coment" style="background:white">  
                                                     <h2> Mensagem oficial </h2> 
-                                                    <p> $Não há mensagens neste grupo. Seja o primeiro a enviar! </p>  
+                                                    <p> Não há mensagens neste grupo. Seja o primeiro a enviar! </p>  
                                                 </div>
                                             </div>`;
                     }
