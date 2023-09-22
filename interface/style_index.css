@@ -3,10 +3,12 @@ body{
 
 }
 
+
 *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 .container{
     line-height: 15px;
@@ -15,11 +17,13 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
+
 label{
     margin-left: 20%;
     padding-right: 10px;
     margin-bottom: .1em;
 }
+
 
 .colcor{
     margin: 2%;
@@ -29,15 +33,18 @@ label{
 
 }
 
+
 .p-2{
     margin-top: 3%;
 }
+
 
 .colnom{
     margin: 2%;
     margin-left: 20%;
     padding-right: 10px;
 }
+
 
 .button{
     margin-left: 85%;
@@ -48,27 +55,33 @@ label{
     padding-right: 12px !important;
 }
 
+
 .dropdown{
     margin-left: 18%;
     margin-top: 5%;
 }
+
 
 #colunas{
     display: flex;
     max-width: 1000px;
 }
 
+
 img{
     margin-left: 12%;
 }
+
 
 .cores{
     padding-top: 5%;
 }
 
+
 .lado{
     margin-left: 20%;
 }
+
 
 .nome{
     padding-top: 5%;
