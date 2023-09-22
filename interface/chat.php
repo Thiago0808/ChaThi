@@ -113,12 +113,14 @@
 
             function receber(){
                 console.log("oi")
+                let verificar =1;
                 fetch (`../PHP/ler.php?tema=${tema.value}`,)
                 .then(function(resposta){
                     console.log(resposta)
                     return resposta.json();
                 }).then(function(resposta){
                     resposta.forEach(function(r){
+                        let verificar =0;
 
                         let lado = "esq";
                         if (r.nome == h1.innerHTML){
@@ -136,6 +138,14 @@
 
                         scroll();
                     });
+                    if (verificar==1){
+                        main.innerHTML += `<div class="esq">  
+                                                <div class="coment" style="background:white">  
+                                                    <h2> Mensagem oficial </h2> 
+                                                    <p> $Não há mensagens neste grupo. Seja o primeiro a enviar! </p>  
+                                                </div>
+                                            </div>`;
+                    }
                 });
             }
             // setInterval
