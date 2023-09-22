@@ -73,6 +73,7 @@
             main.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
             form.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
 
+
             function scroll() {
                 main.scrollTop=main.scrollHeight;
             }
@@ -86,6 +87,7 @@
             console.log(tema.value)
             const texto = document.getElementById("texto")
             const h1 = document.querySelector("h1")
+
             form.addEventListener("submit", function(e){
                 e.preventDefault();
                 enviar();
@@ -157,6 +159,13 @@
                     }
                 });
             }
+
+            texto.addEventListener("keypress", function(e){
+                if (e.key=="Enter"){
+                    enviar()
+                }
+            })
+
             // setInterval
             setInterval(receber, 1000)
             receber();
