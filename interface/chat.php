@@ -112,9 +112,10 @@
             }
 
             let verificar =1;
+            let id = 0
+
             function receber(){
-                console.log("oi")
-                fetch (`../PHP/ler.php?tema=${tema.value}`,)
+                fetch (`../PHP/ler.php?tema=${tema.value}&id=${id}`,)
                 .then(function(resposta){
                     console.log(resposta)
                     return resposta.json();
@@ -141,10 +142,12 @@
                                                     <h3> ${r.dataHora} </h3>
                                                 </div>
                                             </div>`;
+                                            id = r.id;
 
                         scroll();
                     });
                     if (verificar==1){
+                        verificar =0;
                         main.innerHTML += `<div class="esq">  
                                                 <div class="coment" style="background:white">  
                                                     <h2> Mensagem Oficial </h2> 
@@ -155,7 +158,7 @@
                 });
             }
             // setInterval
-            //setInterval(receber, 3000)
+            setInterval(receber, 1000)
             receber();
 
         </script>
