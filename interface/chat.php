@@ -67,12 +67,11 @@
         </form>
 
         <script>
+            let body=document.querySelector("body");
             let main=document.querySelector("main");
             const tema = document.getElementById("tema");
             const form = document.querySelector("form")
-            main.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
-            form.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
-
+            body.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
 
             function scroll() {
                 main.scrollTop=main.scrollHeight;
