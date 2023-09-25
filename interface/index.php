@@ -65,14 +65,14 @@
                 <div class="modal-body">
                     
                     <div class="d-flex justify-content-center">
-                        <img class="botao" src="avatares/avatar2.jpg" alt="Imagem do avatar">
-                        <img class="botao" src="avatares/avatar3.jpg" alt="Imagem do avatar">
-                        <img class="botao" src="avatares/avatar4.jpg" alt="Imagem do avatar">
+                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar1.jpg" alt="Imagem do avatar">
+                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar2.jpg" alt="Imagem do avatar">
+                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar3.jpg" alt="Imagem do avatar">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <img class="botao" src="avatares/avatar5.jpg" alt="Imagem do avatar">
-                        <img class="botao" src="avatares/avatar6.jpg" alt="Imagem do avatar">
-                        <img class="botao" src="avatares/avatar5.jpg" alt="Imagem do avatar">
+                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar4.jpg" alt="Imagem do avatar">
+                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar5.jpg" alt="Imagem do avatar">
+                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar6.jpg" alt="Imagem do avatar">
                     </div>
 
                 </div>

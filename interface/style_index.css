@@ -55,6 +55,8 @@ label{
     border-radius: 100%;
     border: 7px solid #007BFF;
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    width: 70px;
+    height: 70px;
 }
 
 .temas{
@@ -94,8 +96,8 @@ label{
 }
 
 .modal-body img{
-    margin: 2%;
-    border-radius: 50px;
+    margin: 3%;
+    border-radius: 10px;
 }
 
 .botao:link,
