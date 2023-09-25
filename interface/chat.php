@@ -46,9 +46,14 @@
     
     <div class="container">
         <header>
-            <img src="avatares/avatar<?=$avatar?>.jpg" alt="">
-            <h1><?=$nome?></h1>
-            <h4>Tema: <?=$tema?></h4>
+            <div>
+                <img src="avatares/avatar<?=$avatar?>.jpg" alt="" class="avatar">
+            </div>
+            <div>
+                <h1><?=$nome?></h1>
+                <h4>Tema: <?=$tema?></h4>
+            </div>
+
         </header>
 
         <main>
@@ -146,7 +151,7 @@
                         }
 
                         main.innerHTML += `<div class=${lado}> 
-                                                <img src="avatares/avatar${r.avatar}.jpg" alt=""> 
+                                                <img src="avatares/avatar${r.avatar}.jpg" alt="" class="avatar"> 
                                                 <div class="coment" style="background:${r.cor}">  
                                                     <h2> ${r.nome} </h2> 
                                                     <p> ${r.texto} </p>  

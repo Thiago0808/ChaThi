@@ -17,6 +17,16 @@ header{
     padding-top: 1.2%;
     padding-bottom: 1.2%;
     font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: flex-end;
+    gap: 1%;
+}
+
+.avatar{
+    border-radius: 100%;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    width: 70px;
+    height: 70px;
 }
 
 h1{
@@ -64,7 +74,6 @@ h3{
 
 .coment{
     padding: 20px;
-    margin-top: 1.3%;
     border-radius: 20px; 
     max-width: 50%;
     margin-bottom: 1.3%;
@@ -111,11 +120,16 @@ textarea{
 .esq{
     display: flex;
     justify-content: flex-start;
+    margin-top: 1.3%;
+    gap: 1%;
 }
 
 .dir{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-top: 1.3%;
+    gap: 1%;
+    flex-direction: row-reverse;
 }
 
 form{
