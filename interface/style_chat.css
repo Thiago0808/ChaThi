@@ -2,6 +2,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #e4e4e4;
     margin: 0;
+    background: lightgray 0% 0% / 350px 350px repeat;
 }
 
 .container{
@@ -13,8 +14,8 @@ body{
 header{
     background-color: white;
     padding-left: 6.25%;
-    padding-top: 1.8%;
-    padding-bottom: 1.8%;
+    padding-top: 1.2%;
+    padding-bottom: 1.2%;
     font-family: 'Inter', sans-serif;
 }
 
@@ -29,7 +30,7 @@ h1{
 
 h4{
     color: #000;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
@@ -41,7 +42,6 @@ main{
     height: 700px;
     padding-left: 6.25%;
     padding-right: 6.25%;
-    background: lightgray 0% 0% / repeat;
 }
 
 h2{

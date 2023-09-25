@@ -67,11 +67,11 @@
         </form>
 
         <script>
+            let body=document.querySelector("body");
             let main=document.querySelector("main");
             const tema = document.getElementById("tema");
             const form = document.querySelector("form")
-            main.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
-            form.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
+            body.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
 
             function scroll() {
                 main.scrollTop=main.scrollHeight;
@@ -86,6 +86,7 @@
             console.log(tema.value)
             const texto = document.getElementById("texto")
             const h1 = document.querySelector("h1")
+
             form.addEventListener("submit", function(e){
                 e.preventDefault();
                 enviar();
@@ -111,16 +112,24 @@
                 });
             }
 
-            let verificar = 0
+            let verificar =1;
+            let id = 0
+
             function receber(){
-                console.log("oi")
-                fetch (`../PHP/ler.php?tema=${tema.value}`,)
+                fetch (`../PHP/ler.php?tema=${tema.value}&id=${id}`,)
                 .then(function(resposta){
                     console.log(resposta)
                     return resposta.json();
                 }).then(function(resposta){
                     resposta.forEach(function(r){
                         verificar = 1
+
+                        //Código do Professor
+                        //let div = document.createElement('div');
+                        //div.innerHTML= `<strong>Nome: ${r.nome}</strong><br> ${r.msg}`;
+                        //main.appendChild(div)
+
+                        verificar =0;
 
                         let lado = "esq";
                         if (r.nome == h1.innerHTML){
@@ -135,12 +144,14 @@
                                                     <h3> ${r.dataHora} </h3>
                                                 </div>
                                             </div>`;
+                                            id = r.id;
 
                         scroll();
                     });
-                    if (verificar==0){
+                    if (verificar==1){
+                        verificar =0;
                         main.innerHTML += `<div class="esq">  
-                                                <div class="coment" style="background: white">  
+                                                <div class="coment" style="background:white">  
                                                     <h2> Mensagem Oficial </h2> 
                                                     <p> Não há mensagens neste grupo. Seja o primeiro a enviar! </p>  
                                                 </div>
@@ -148,8 +159,15 @@
                     }
                 });
             }
+
+            texto.addEventListener("keypress", function(e){
+                if (e.key=="Enter"){
+                    enviar()
+                }
+            })
+
             // setInterval
-            //setInterval(receber, 3000)
+            setInterval(receber, 1000)
             receber();
 
         </script>
