@@ -91,12 +91,12 @@ label{
 }
 
 .modal-title{
-    font-size: 1.875rem;
+    font-size: 2rem;
     padding: 2%;
 }
 
 .modal-body img{
-    margin: 3%;
+    margin: 2%;
     border-radius: 10px;
 }
 

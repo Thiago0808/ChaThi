@@ -31,7 +31,7 @@
                     </div>
                     <div class="d-flex flex-row bd-highlight mb-3">
                         <div class="p-2 bd-highlight">
-                            <img type="button" data-toggle="modal" data-target="#exampleModal" class="avatar botao" src="avatares/avatar1.jpg" alt="Imagem do avatar">
+                            <img id="avatarprincipal" value="1" type="button" data-toggle="modal" data-target="#exampleModal" class="avatar botao" src="avatares/avatar1.jpg" alt="Imagem do avatar">
                         </div>
                         <div class="p-2 bd-highlight temas">
                             <label for="exampleFormControlSelect1">Temas</label>
@@ -65,20 +65,34 @@
                 <div class="modal-body">
                     
                     <div class="d-flex justify-content-center">
-                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar1.jpg" alt="Imagem do avatar">
-                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar2.jpg" alt="Imagem do avatar">
-                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar3.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value=1 class="botao" type="button" data-dismiss="modal" src="avatares/avatar1.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value=2 class="botao" type="button" data-dismiss="modal" src="avatares/avatar2.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value=3 class="botao" type="button" data-dismiss="modal" src="avatares/avatar3.jpg" alt="Imagem do avatar">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar4.jpg" alt="Imagem do avatar">
-                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar5.jpg" alt="Imagem do avatar">
-                        <img class="botao" type="button" data-dismiss="modal" src="avatares/avatar6.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value="4" class="botao" type="button" data-dismiss="modal" src="avatares/avatar4.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value="5" class="botao" type="button" data-dismiss="modal" src="avatares/avatar5.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value="6" class="botao" type="button" data-dismiss="modal" src="avatares/avatar6.jpg" alt="Imagem do avatar">
                     </div>
 
                 </div>
                 </div>
             </div>
             </div>
+
+            <script>
+                const avatar=document.getElementsByTagName("img");
+                console.log(avatar)
+                
+                for(let i=0; i<avatar.length; i++){
+                    avatar[i].addEventListener("click", function(){
+                        console.log(avatar[i].src)
+                        document.getElementById("avatarprincipal").src=avatar[i].src;
+                    })
+                }
+
+
+            </script>
 
             <div class="espaco"></div>
     
