@@ -92,6 +92,7 @@ h3{
 
 .enviar-mensagem{
     display: flex;
+    max-width: 100%;
 }
 
 .input-group{
@@ -134,6 +135,22 @@ textarea{
 
 form{
     padding-bottom: 52px;
+}
+
+@media screen and (max-width:900px){
+    textarea{
+        max-width: 80%;
+    }    
+
+    .input-group{
+        flex-basis: 75%;
+    }
+    
+    .botao{
+        flex-basis: 25%;
+        padding-left: 2%;
+    }
+    
 }
 
 

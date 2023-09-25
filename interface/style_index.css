@@ -71,7 +71,8 @@ label{
 
 #colunas{
     display: flex;
-    max-width: 1000px;
+    max-width: 1500px;
+    flex-wrap: wrap;
 }
 
 .logo{
@@ -153,6 +154,16 @@ label{
     animation-fill-mode: backwards;
 }
 
+.d-flex{
+    flex-wrap: wrap !important;
+}
+
+@media screen and (max-width: 900px){
+    *{
+        margin-left: 0 !important;
+    }
+    
+}
 
 
 

@@ -18,14 +18,14 @@
     <div class="container">
         <div id="colunas">
             <div class="esq">
-                <img class="logo" src="imagens/Chathi-removebg-preview 1.png" alt="">
+                <img class="logo img-fluid" src="imagens/Chathi-removebg-preview 1.png" alt="">
     
                 <form action="chat.php" method="get">
-                    <div class="nome">
+                    <div class="nome p-2">
                         <label for="nome">Nome</label>
                         <input class= "colnom form-control" type="search" name="nome" id="nome" placeholder="" required>
                     </div>
-                    <div class="cores">
+                    <div class="cores p-2">
                         <label for="cor">Cor da mensagem</label>
                         <input class= "colcor"  type="color" name="cor" id="cor" placeholder="" required>
                     </div>
@@ -66,14 +66,14 @@
                 <div class="modal-body">
                     
                     <div class="d-flex justify-content-center">
-                        <img id="avatar" value=1 class="botao" type="button" data-dismiss="modal" src="avatares/avatar1.jpg" alt="Imagem do avatar">
-                        <img id="avatar" value=2 class="botao" type="button" data-dismiss="modal" src="avatares/avatar2.jpg" alt="Imagem do avatar">
-                        <img id="avatar" value=3 class="botao" type="button" data-dismiss="modal" src="avatares/avatar3.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value=1 class="botao img-fluid" type="button" data-dismiss="modal" src="avatares/avatar1.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value=2 class="botao img-fluid" type="button" data-dismiss="modal" src="avatares/avatar2.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value=3 class="botao img-fluid" type="button" data-dismiss="modal" src="avatares/avatar3.jpg" alt="Imagem do avatar">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <img id="avatar" value="4" class="botao" type="button" data-dismiss="modal" src="avatares/avatar4.jpg" alt="Imagem do avatar">
-                        <img id="avatar" value="5" class="botao" type="button" data-dismiss="modal" src="avatares/avatar5.jpg" alt="Imagem do avatar">
-                        <img id="avatar" value="6" class="botao" type="button" data-dismiss="modal" src="avatares/avatar6.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value="4" class="botao img-fluid" type="button" data-dismiss="modal" src="avatares/avatar4.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value="5" class="botao img-fluid" type="button" data-dismiss="modal" src="avatares/avatar5.jpg" alt="Imagem do avatar">
+                        <img id="avatar" value="6" class="botao img-fluid" type="button" data-dismiss="modal" src="avatares/avatar6.jpg" alt="Imagem do avatar">
                     </div>
 
                 </div>
@@ -95,12 +95,9 @@
                 }
 
 
-            </script>
-
-            <div class="espaco"></div>
-    
+            </script>    
             <div class="dir">
-                <img class="lado" src="imagens/undraw_chat_re_re1u 1.png" alt="">
+                <img class="lado img-fluid" src="imagens/undraw_chat_re_re1u 1.png" alt="" >
             </div>
         </div>
     </div>
