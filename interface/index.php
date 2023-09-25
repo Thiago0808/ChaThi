@@ -18,7 +18,7 @@
     <div class="container">
         <div id="colunas">
             <div class="esq">
-                <img src="imagens/Chathi-removebg-preview 1.png" alt="">
+                <img class="logo" src="imagens/Chathi-removebg-preview 1.png" alt="">
     
                 <form action="chat.php" method="get">
                     <div class="nome">
@@ -30,6 +30,9 @@
                         <input class= "colcor"  type="color" name="cor" id="cor" placeholder="" required>
                     </div>
                     <div class="d-flex flex-row bd-highlight mb-3">
+                        <div class="p-2 bd-highlight">
+                            <img type="button" data-toggle="modal" data-target="#exampleModal" class="avatar botao" src="avatares/avatar1.jpg" alt="Imagem do avatar">
+                        </div>
                         <div class="p-2 bd-highlight temas">
                             <label for="exampleFormControlSelect1">Temas</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="tema">
@@ -47,6 +50,34 @@
                     </div>
                 </form>
 
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Escolha um Avatar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="d-flex justify-content-center">
+                        <img class="botao" src="avatares/avatar2.jpg" alt="Imagem do avatar">
+                        <img class="botao" src="avatares/avatar3.jpg" alt="Imagem do avatar">
+                        <img class="botao" src="avatares/avatar4.jpg" alt="Imagem do avatar">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <img class="botao" src="avatares/avatar5.jpg" alt="Imagem do avatar">
+                        <img class="botao" src="avatares/avatar6.jpg" alt="Imagem do avatar">
+                        <img class="botao" src="avatares/avatar5.jpg" alt="Imagem do avatar">
+                    </div>
+
+                </div>
+                </div>
+            </div>
             </div>
 
             <div class="espaco"></div>
