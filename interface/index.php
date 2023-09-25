@@ -89,7 +89,8 @@
                     avatar[i].addEventListener("click", function(){
                         console.log(avatar[i].src)
                         document.getElementById("avatarprincipal").src=avatar[i].src;
-                        document.getElementById("escondido").value=i;
+                        console.log(i);
+                        document.getElementById("escondido").value=i-1;
                     })
                 }
 

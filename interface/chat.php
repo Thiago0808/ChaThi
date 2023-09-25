@@ -92,6 +92,7 @@
             console.log(cor.value)
             console.log(tema.value)
             const texto = document.getElementById("texto")
+            const avatar = document.getElementById("avatar")
             const h1 = document.querySelector("h1")
 
             form.addEventListener("submit", function(e){
@@ -105,7 +106,7 @@
                 //data.append("texto", texto.value);
                 //data.append("cor", cor.value)
 
-                fetch(`../PHP/recebe.php?nome=${nome.value}&texto=${texto.value}&cor=${cor.value}&tema=${tema.value}`, {
+                fetch(`../PHP/recebe.php?nome=${nome.value}&texto=${texto.value}&cor=${cor.value}&tema=${tema.value}&avatar=${avatar.value}`, {
                     //method: "GET",
                     //body: data
                 }).then(function(resposta){
