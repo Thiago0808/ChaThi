@@ -12,6 +12,11 @@
     if (!trim($tema)){
         header("Location: index.php");
     }
+
+    $avatar = filter_input(INPUT_GET, 'avatar', FILTER_SANITIZE_NUMBER_INT);
+    if (!trim($avatar)){
+        header("Location: index.php");
+    }
 ?>
     
 <!DOCTYPE html>
@@ -41,6 +46,7 @@
     
     <div class="container">
         <header>
+            <img src="avatares/avatar<?=$avatar?>.jpg" alt="">
             <h1><?=$nome?></h1>
             <h4>Tema: <?=$tema?></h4>
         </header>
@@ -56,6 +62,7 @@
             <input type="hidden" name="nome" value="<?php echo $nome?>" id="nome">
             <input type="hidden" name="cor" value=<?=urlencode($cor)?> id="cor">
             <input type="hidden" name="tema" value=<?=$tema?> id="tema">
+            <input type="hidden" name="avatar" value=<?=$avatar?> id="avatar">
             <div class="enviar-mensagem">
                 <div class="input-group">
                     <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto" id = "texto"></textarea>
@@ -137,7 +144,8 @@
                             lado = "dir";
                         }
 
-                        main.innerHTML += `<div class=${lado}>  
+                        main.innerHTML += `<div class=${lado}> 
+                                                <img src="avatares/avatar${r.avatar}.jpg" alt=""> 
                                                 <div class="coment" style="background:${r.cor}">  
                                                     <h2> ${r.nome} </h2> 
                                                     <p> ${r.texto} </p>  

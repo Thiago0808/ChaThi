@@ -33,6 +33,7 @@
                         <div class="p-2 bd-highlight">
                             <img id="avatarprincipal" value="1" type="button" data-toggle="modal" data-target="#exampleModal" class="avatar botao" src="avatares/avatar1.jpg" alt="Imagem do avatar">
                         </div>
+                        <input type="hidden" name="avatar" value="1" id="escondido">
                         <div class="p-2 bd-highlight temas">
                             <label for="exampleFormControlSelect1">Temas</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="tema">
@@ -88,6 +89,7 @@
                     avatar[i].addEventListener("click", function(){
                         console.log(avatar[i].src)
                         document.getElementById("avatarprincipal").src=avatar[i].src;
+                        document.getElementById("escondido").value=i;
                     })
                 }
 
