@@ -47,7 +47,7 @@
     <div class="container">
         <header>
             <div>
-                <img src="avatares/avatar<?=$avatar?>.jpg" alt="" class="avatar">
+                <img src="avatares/avatar<?=$avatar?>.jpg" alt="" class="avatar-header">
             </div>
             <div>
                 <h1><?=$nome?></h1>
