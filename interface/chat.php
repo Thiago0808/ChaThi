@@ -1,12 +1,21 @@
 <?php
     $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
     if (!trim($nome)){
-        header("Location: index.html");
+        header("Location: index.php");
     }
     $cor = filter_input(INPUT_GET, 'cor', FILTER_SANITIZE_SPECIAL_CHARS);
     urldecode($cor);
     if (!trim($cor)){
-        header("Location: index.html");
+        header("Location: index.php");
+    }
+    $tema = filter_input(INPUT_GET, 'tema', FILTER_SANITIZE_SPECIAL_CHARS);
+    if (!trim($tema)){
+        header("Location: index.php");
+    }
+
+    $avatar = filter_input(INPUT_GET, 'avatar', FILTER_SANITIZE_NUMBER_INT);
+    if (!trim($avatar)){
+        header("Location: index.php");
     }
 ?>
     
@@ -15,6 +24,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte Inter 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    
+    <!-- Fonte Inter 200 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -27,49 +46,28 @@
     
     <div class="container">
         <header>
-            <h1><?=$nome?></h1>
+            <div>
+                <img src="avatares/avatar<?=$avatar?>.jpg" alt="" class="avatar-header">
+            </div>
+            <div>
+                <h1><?=$nome?></h1>
+                <h4>Tema: <?=$tema?></h4>
+            </div>
+
         </header>
 
         <main>
             <?php
-                require '../PHP/conexao.php';
-
-                $sql = "SELECT * FROM comentario ORDER BY id DESC LIMIT 30";
-                $comentarios = $conexao->query($sql);
-                $comentarios = $comentarios->fetchAll();
-                $comentarios = array_reverse($comentarios);
-                foreach($comentarios as $c){
-
-                    if ($c["nome"]==$nome){
-                        $lado="dir";
-                    }
-                    else{
-                        $lado="esq";
-                    }
-
-                    echo '<div class="'.$lado.'">';
-                        echo '<div class="coment" style="background:'.$c["cor"].'">';
-                            echo '<h2>';
-                                echo $c['nome'];
-                            echo '</h2>';
-                            echo '<p>';
-                                echo $c['texto'];
-                            echo '</p>';
-                            echo '<h3>';
-                                echo $c['dataHora'];
-                            echo '</h3>';
-                        echo '</div>';
-                    echo '</div>';
-                }
-
-
+                $sql = "SELECT * FROM comentario WHERE tema='$tema' ORDER BY id DESC";
             ?>
+      
         </main>
-        
 
         <form action="../PHP/recebe.php" method="get">
             <input type="hidden" name="nome" value="<?php echo $nome?>" id="nome">
             <input type="hidden" name="cor" value=<?=urlencode($cor)?> id="cor">
+            <input type="hidden" name="tema" value=<?=$tema?> id="tema">
+            <input type="hidden" name="avatar" value=<?=$avatar?> id="avatar">
             <div class="enviar-mensagem">
                 <div class="input-group">
                     <textarea placeholder="Digite aqui..." class="form-control col-12" aria-label="With textarea" name="texto" id = "texto"></textarea>
@@ -79,10 +77,14 @@
                 </div>
             </div>
         </form>
-        
 
         <script>
+            let body=document.querySelector("body");
             let main=document.querySelector("main");
+            const tema = document.getElementById("tema");
+            const form = document.querySelector("form")
+            body.style.backgroundImage = ` url(pattern/pattern${tema.value}.jpg)`;
+
             function scroll() {
                 main.scrollTop=main.scrollHeight;
             }
@@ -93,8 +95,11 @@
             console.log(nome.value)
             const cor = document.getElementById("cor")
             console.log(cor.value)
+            console.log(tema.value)
             const texto = document.getElementById("texto")
-            const form = document.querySelector("form")
+            const avatar = document.getElementById("avatar")
+            const h1 = document.querySelector("h1")
+
             form.addEventListener("submit", function(e){
                 e.preventDefault();
                 enviar();
@@ -106,7 +111,7 @@
                 //data.append("texto", texto.value);
                 //data.append("cor", cor.value)
 
-                fetch(`../PHP/recebe.php?nome=${nome.value}&texto=${texto.value}&cor=${cor.value}`, {
+                fetch(`../PHP/recebe.php?nome=${nome.value}&texto=${texto.value}&cor=${cor.value}&tema=${tema.value}&avatar=${avatar.value}`, {
                     //method: "GET",
                     //body: data
                 }).then(function(resposta){
@@ -120,22 +125,63 @@
                 });
             }
 
+            let verificar =1;
+            let id = 0
+
             function receber(){
-                fetch ("../PHP/ler.php")
+                fetch (`../PHP/ler.php?tema=${tema.value}&id=${id}`,)
                 .then(function(resposta){
                     console.log(resposta)
                     return resposta.json();
                 }).then(function(resposta){
                     resposta.forEach(function(r){
-                        main.innerHTML += r.nome;
-                        main.innerHTML += r.texto;
-                        main.innerHTML += r.dataHora;
-                        rolar();
+                        verificar = 1
+
+                        //Código do Professor
+                        //let div = document.createElement('div');
+                        //div.innerHTML= `<strong>Nome: ${r.nome}</strong><br> ${r.msg}`;
+                        //main.appendChild(div)
+
+                        verificar =0;
+
+                        let lado = "esq";
+                        if (r.nome == h1.innerHTML){
+                            console.log(1)
+                            lado = "dir";
+                        }
+
+                        main.innerHTML += `<div class=${lado}> 
+                                                <img src="avatares/avatar${r.avatar}.jpg" alt="" class="avatar"> 
+                                                <div class="coment" style="background:${r.cor}">  
+                                                    <h2> ${r.nome} </h2> 
+                                                    <p> ${r.texto} </p>  
+                                                    <h3> ${r.dataHora} </h3>
+                                                </div>
+                                            </div>`;
+                                            id = r.id;
+
+                        scroll();
                     });
+                    if (verificar==1){
+                        verificar =0;
+                        main.innerHTML += `<div class="esq">  
+                                                <div class="coment" style="background:white">  
+                                                    <h2> Mensagem Oficial </h2> 
+                                                    <p> Não há mensagens neste grupo. Seja o primeiro a enviar! </p>  
+                                                </div>
+                                            </div>`;
+                    }
                 });
             }
+
+            texto.addEventListener("keypress", function(e){
+                if (e.key=="Enter"){
+                    enviar()
+                }
+            })
+
             // setInterval
-            setInterval(receber, 3000)
+            setInterval(receber, 1000)
             receber();
 
         </script>
