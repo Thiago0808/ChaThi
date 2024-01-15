@@ -7,7 +7,7 @@ O ChaThi começou como um projeto de Programação Web, no Curso Técnico em Inf
 
 
 <div align="center">
-<video style="width: 80%;" src="https://github.com/Thiago0808/ChaThi/assets/141963700/87bef454-b0af-4594-9a1d-aabbcf75c9ef" />
+<video style="width: 80%;" src="https://github.com/Thiago0808/ChaThi/assets/141963700/87bef454-b0af-4594-9a1d-aabbcf75c9ef"/>
 </div>
 
 <h1 align="center">Sistema Assíncrono</h1>
@@ -18,6 +18,10 @@ Ao entrar no site, a pessoa seleciona seu nome (Não utilizamos um sistema de co
 Então, ao entrar no chat, uma função JS irá pegar os comentários do banco de dados com o arquivo ler.php e apresentar eles. O usuário então pode escrever seu comentário e o enviar, para o recebe.php que recebe os dados e os armazena no banco.
 
 O que torna este sistema assíncrono é na realidade, bem simples. A função de apresentar todos os comentários é reativada a cada 1 segundo, através de JS, então os comentários recém adicionados já são apresentados para todo mundo.
+
+<div align="center">
+<video style="width: 80%;" src="https://github.com/Thiago0808/ChaThi/assets/141963700/0126e8dd-fbf8-44d0-9062-f17ead321632"/>
+</div>
 
 <h1 align="center">Personalização</h1>
 Feita a base do site, cada grupo deveria personalizar seu chat, tanto esteticamente, quando com novas ideias e funções. Para tornar nosso chat mais bonito, utilizamos Figma para os designs e Bootstrap para os componentes, e adicionamos 3 funções novas, que são as seguintes:
