@@ -5,6 +5,11 @@
 <h1 align="center">Como Começou?</h1>
 O ChaThi começou como um projeto de Programação Web, no Curso Técnico em Informática do IFSC na qual eu estudava. Tratava-se de um trabalho em equipe que faríamos um chat online, seguindo inicialmente nosso professor para saber executar o projeto, e depois, inovando com nossas ideias.
 
+
+<div align="center">
+<video style="width: 80%;" src="https://github.com/Thiago0808/ChaThi/assets/141963700/87bef454-b0af-4594-9a1d-aabbcf75c9ef" />
+</div>
+
 <h1 align="center">Sistema Assíncrono</h1>
 O foco deste trabalho era programar um sistema de chat assíncrono, ou seja, um sistema online que permite pessoas em computadores diferentes em tempo real. Para isso, fizemos uso de JavaScript, PHP e de um banco de dados SQL que armazena os comentários. 
 
@@ -32,6 +37,7 @@ Para isso, a pessoa seleciona no começo do chat, junto com nome e cor, qual gru
 Ao invés de criarmos uma nova tabela para cada grupo, na qual precisaria de um NxN, o que tornaria o código mais complexo, simplesmente adicionamos o atributo tema na tabela comentário, já que o projeto é simples.
 
 Também adicionamos uma função que ao entrar na página, muda o fundo do chat para um correspondente ao tema.
+
 
 <h1 align="center">Função: Avatares</h1>
 Por fim, nossa última novidade foram avatares, fotos de personagens para nossos usuários, que podem ser selecionanos na tela inicial.
