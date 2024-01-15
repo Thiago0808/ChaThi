@@ -32,3 +32,12 @@ Para isso, a pessoa seleciona no começo do chat, junto com nome e cor, qual gru
 Ao invés de criarmos uma nova tabela para cada grupo, na qual precisaria de um NxN, o que tornaria o código mais complexo, simplesmente adicionamos o atributo tema na tabela comentário, já que o projeto é simples.
 
 Também adicionamos uma função que ao entrar na página, muda o fundo do chat para um correspondente ao tema.
+
+<h1 align="center">Função: Avatares</h1>
+Por fim, nossa última novidade foram avatares, fotos de personagens para nossos usuários, que podem ser selecionanos na tela inicial.
+
+Existem 6 opções de avatares, que acompanham o usuário no decorrer do site.
+
+Estes são até salvos no banco de dados, junto com os comentários, sendo salvos como números de 1 a 6. As imagens, em si, já estão salvas em uma pasta no código.
+
+No código, esse número é pego e colocado no nome da imagem, pois estas são nomeadas como avatar1, avatar2 na pasta, e assim por diante.
