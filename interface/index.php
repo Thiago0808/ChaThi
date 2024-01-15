@@ -18,7 +18,7 @@
     <div class="container">
         <div id="colunas">
             <div class="esq">
-                <img class="logo img-fluid" src="imagens/Chathi-removebg-preview 1.png" alt="">
+                <img class="logo img-fluid" src="imagens/logoChathi.png" alt="Logo do ChaThi">
     
                 <form action="chat.php" method="get">
                     <div class="nome p-2">
@@ -80,8 +80,15 @@
                 </div>
             </div>
             </div>
+  
+            <div class="dir">
+                <img class="lado img-fluid" src="imagens/desenho.png" alt="desenho de pessoa olhando chat" >
+            </div>
+        </div>
+    </div>
 
-            <script>
+    
+    <script>
                 const avatar=document.getElementsByTagName("img");
                 console.log(avatar)
                 
@@ -95,12 +102,7 @@
                 }
 
 
-            </script>    
-            <div class="dir">
-                <img class="lado img-fluid" src="imagens/undraw_chat_re_re1u 1.png" alt="" >
-            </div>
-        </div>
-    </div>
+    </script>  
 
     <!-- Boostrap -->
     <!-- Optional JavaScript; choose one of the two! -->
