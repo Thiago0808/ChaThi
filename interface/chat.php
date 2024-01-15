@@ -106,14 +106,7 @@
             });
 
             function enviar(){
-                //let data = new FormData();
-                //data.append("nome", nome.value)
-                //data.append("texto", texto.value);
-                //data.append("cor", cor.value)
-
                 fetch(`../PHP/recebe.php?nome=${nome.value}&texto=${texto.value}&cor=${cor.value}&tema=${tema.value}&avatar=${avatar.value}`, {
-                    //method: "GET",
-                    //body: data
                 }).then(function(resposta){
                     if (!resposta.ok){
                         alert("Não foi possível enviar");
@@ -121,7 +114,6 @@
                     else{
                         texto.value="";
                     }
-                    console.log(resposta)
                 });
             }
 
@@ -131,22 +123,13 @@
             function receber(){
                 fetch (`../PHP/ler.php?tema=${tema.value}&id=${id}`,)
                 .then(function(resposta){
-                    console.log(resposta)
                     return resposta.json();
                 }).then(function(resposta){
                     resposta.forEach(function(r){
-                        verificar = 1
-
-                        //Código do Professor
-                        //let div = document.createElement('div');
-                        //div.innerHTML= `<strong>Nome: ${r.nome}</strong><br> ${r.msg}`;
-                        //main.appendChild(div)
-
                         verificar =0;
 
                         let lado = "esq";
                         if (r.nome == h1.innerHTML){
-                            console.log(1)
                             lado = "dir";
                         }
 
@@ -180,7 +163,6 @@
                 }
             })
 
-            // setInterval
             setInterval(receber, 1000)
             receber();
 
