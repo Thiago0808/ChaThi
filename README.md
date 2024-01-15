@@ -17,4 +17,9 @@ O que torna este sistema assíncrono é na realidade, bem simples. A função de
 <h1 align="center">Personalização</h1>
 Feita a base do site, cada grupo deveria personalizar seu chat, tanto esteticamente, quando com novas ideias e funções. Para tornar nosso chat mais bonito, utilizamos Figma para os designs e Bootstrap para os componentes, e adicionamos 3 funções novas, que são as seguintes:
 
+<h1 align="center">Função: Cores nas Mensagens</h1>
+A primeira atualização que fizemos foi a possiblidade de escolher a cor de fundo de suas mensagens, junto com seu nome de usuário.
 
+Essa cor seria então salva no banco de dados junto com o comentário, e colocada no seu style sempre que apresentado.
+
+Um problema que tivemos inicialmente foi que, ao mandar a cor em hexadecial (Ex: #FF0000) a # muitas vezes se perdia, tornando necessário funções do PHP de decode e encode para ela.
