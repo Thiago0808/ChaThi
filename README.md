@@ -23,3 +23,12 @@ A primeira atualização que fizemos foi a possiblidade de escolher a cor de fun
 Essa cor seria então salva no banco de dados junto com o comentário, e colocada no seu style sempre que apresentado.
 
 Um problema que tivemos inicialmente foi que, ao mandar a cor em hexadecial (Ex: #FF0000) a # muitas vezes se perdia, tornando necessário funções do PHP de decode e encode para ela.
+
+<h1 align="center">Função: Temas de Conversa</h1>
+Nossa segunda novidade foi, ao invés de ter somente um chat geral, termos chats separados por temas, como Programadores, Livros, etc...
+
+Para isso, a pessoa seleciona no começo do chat, junto com nome e cor, qual grupo ela deseja entrar, e então, o arquivo php irá apresentar somentes as mensagens daquele grupo.
+
+Ao invés de criarmos uma nova tabela para cada grupo, na qual precisaria de um NxN, o que tornaria o código mais complexo, simplesmente adicionamos o atributo tema na tabela comentário, já que o projeto é simples.
+
+Também adicionamos uma função que ao entrar na página, muda o fundo do chat para um correspondente ao tema.
